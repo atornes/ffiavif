@@ -1,13 +1,13 @@
 [package]
-name = "cavif"
-description = "Encodes images in AVIF format (image2avif converter). Pure Rust."
-version = "1.3.3"
-authors = ["Kornel Lesiński <kornel@geekhood.net>"]
+name = "ffiavif"
+description = "Encodes images in AVIF format. Pure Rust."
+version = "1.0.0"
+authors = ["Anders Tornes <anders.tornes@unimicro.no>"]
 edition = "2018"
 license = "BSD-3-Clause"
 readme = "README.md"
 keywords = ["avif", "png2avif", "jpeg2avif", "convert", "av1"]
-categories = ["command-line-utilities", "multimedia::images", "multimedia::encoding"]
+categories = ["multimedia::images", "multimedia::encoding"]
 homepage = "https://lib.rs/cavif"
 repository = "https://github.com/kornelski/cavif-rs"
 include = ["README.md", "LICENSE", "Cargo.toml", "/src/*.rs"]
@@ -22,6 +22,12 @@ cocoa_image = { version = "1.0.4", optional = true }
 imgref = "1.9.1"
 jpeg-decoder = "0.1.22"
 clap = { version = "2.33.3", default-features = false, features = ["color", "suggestions", "wrap_help"] }
+log = "*"
+
+[lib]
+name = "ffiavif"
+path = "src/lib.rs"
+crate-type = ["dylib"]
 
 [features]
 default = ["asm"]

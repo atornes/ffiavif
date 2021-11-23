@@ -1,3 +1,5 @@
+mod lib;
+
 use clap::{Arg, App, AppSettings, value_t};
 use imgref::ImgVec;
 use rayon::prelude::*;

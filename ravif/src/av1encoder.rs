@@ -4,6 +4,7 @@ use rgb::RGB8;
 use rgb::RGBA8;
 
 /// See [`Config`]
+#[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub enum ColorSpace {
     YCbCr,
@@ -13,6 +14,7 @@ pub enum ColorSpace {
 /// Encoder configuration struct
 ///
 /// See [`encode_rgba`](crate::encode_rgba)
+#[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct EncConfig {
     /// 0-100 scale
