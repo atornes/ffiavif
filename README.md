@@ -1,3 +1,5 @@
+# incomplete - don't use
+
 # `ffiavif` — PNG/JPEG to AVIF converter library with FFI exports
 
 Based on [cavif-rs](https://github.com/kornelski/cavif-rs)
